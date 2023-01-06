@@ -1,7 +1,7 @@
 {
-  "name": "oxymaster",
+  "name": "uclsp",
   "version": "1.0.0",
-  "description": "landing page",
+  "description": "Corporate website",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QyrBalasy/oxymaster.git"
+    "url": "git+https://github.com/QyrBalasy/uclsp.git"
   },
   "author": "qyrbalasy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QyrBalasy/oxymaster/issues"
+    "url": "https://github.com/QyrBalasy/uclsp/issues"
   },
-  "homepage": "https://github.com/QyrBalasy/oxymaster#readme",
+  "homepage": "https://github.com/QyrBalasy/uclsp#readme",
   "dependencies": {
     "browser-sync": "^2.27.10",
     "del": "^7.0.0",
