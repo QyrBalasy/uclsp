@@ -1,5 +1,5 @@
 @import "base/module";
-@import 'vendors/module';
+@import "vendors/module";
 @import "components/module";
 @import "layout/module.scss";
 @import "pages/module.scss";
@@ -53,5 +53,12 @@ p {
 
 a {
   text-decoration: none;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300; 
+  color: $velvet-black;
+  transition: all ease-in .5s;
+  &:hover{
+    color: $golden-crown__secondary;
+  }
 }
-
