@@ -1,0 +1,57 @@
+@import "base/module";
+@import 'vendors/module';
+@import "components/module";
+@import "layout/module.scss";
+@import "pages/module.scss";
+@import "fonts.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1px solid #a1c4ff;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Raleway;
+  font-weight: 300;
+  color: $velvet-black;
+  background-color: $white;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  @media (max-width: $L-mobile) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+

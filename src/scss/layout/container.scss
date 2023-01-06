@@ -1,0 +1,22 @@
+.container{
+  max-width: $max-widthContainer + px;
+  margin: 0 auto;
+  position: relative;
+  @media (max-width: $desktop) {
+      max-width: 1200px;
+    }
+  @media (max-width: $laptop) {
+      max-width: 850px;  
+  }
+  @media (max-width: $tablet) {
+      max-width: 640px;  
+  }
+  @media (max-width: $L-mobile) {
+      max-width: 500px;
+      padding: 0 5px;  
+  }
+  @media (max-width: $mobile) {
+      max-width: 360px;
+  }
+}
+
