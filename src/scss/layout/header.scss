@@ -7,7 +7,7 @@
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
   }
   & svg {
     width: 22px;
@@ -32,10 +32,13 @@
 }
 
 .headerMain {
-  padding: 19px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &-items {
+    padding: 19px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &-logo {
     display: flex;
     column-gap: 34px;

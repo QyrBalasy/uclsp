@@ -4,8 +4,100 @@
   <body>
     @@include('html/header.html', {})
     <main>
-      <section>
-        <div class="container">Hello world!</div>
+      <section class="section section-hero">
+        <div class="container">
+          <div class="section-cols">
+            <div class="section-cols__left">
+              <div class="section-cols__left-content">
+                <h1>Дополнительное профессиональное образование</h1>
+                <h4>Переквалификация не отрываясь от производства</h4>
+                <button class="button">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="section-cols__right">
+              <div class="section-cols__right-content">
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#icon_books"></use>
+                    </svg>
+                    Охрана труда на высоте</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_laptop-education"
+                      ></use>
+                    </svg>
+                    Аттестация сварщиков НАКС</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_checking"
+                      ></use>
+                    </svg>
+                    Разработка пакета документов по охране труда и ПБ</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_certificate"
+                      ></use>
+                    </svg>
+                    Промышленная безопасность</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-services">
+        <div class="container">
+          <h2>Наши услуги</h2>
+          <div class="section-cards">
+            <div class="section-cards__item">
+              <p>Охрана труда и пожарно-технический минимум</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Повышение квалификации и профессиональная переподготовка</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Обучение рабочим специальностям</p>
+              <p>(стропальщики, монтажники, машинисты)</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Электробезопасность</p>
+            </div>
+            <div class="section-cards__item">
+              <p>СОУТ (специальная оценка условий труда)</p>
+              <p>Оценка профессиональных рисков</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Сертификация</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Лицензирование</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Экспертиза промышленной безопасности</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Неразрушающий контроль (ВИК НК)</p>
+            </div>
+            <div class="section-cards__item">
+              <p>Подготовка документов для вступления в СРО</p>
+              <p>(саморегулируемая организация)</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     @@include('html/footer.html', {})
