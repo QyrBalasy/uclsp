@@ -34,6 +34,8 @@ body {
 body {
   font-family: Raleway;
   font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
   color: $velvet-black;
   background-color: $white;
   &.lock {
@@ -42,12 +44,9 @@ body {
 }
 
 p {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
   @media (max-width: $L-mobile) {
-    font-size: 14px;
-    line-height: 21px;
   }
 }
 
@@ -55,10 +54,10 @@ a {
   text-decoration: none;
   font-size: 18px;
   line-height: 22px;
-  font-weight: 300; 
+  font-weight: 300;
   color: $velvet-black;
-  transition: all ease-in .5s;
-  &:hover{
+  transition: all ease-in 0.5s;
+  &:hover {
     color: $golden-crown__secondary;
   }
 }
