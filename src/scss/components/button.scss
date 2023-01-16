@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
 .button {
   background-color: $yellow-crown;
   border: none;
@@ -7,4 +11,17 @@
   font-size: 22px;
   line-height: 28px;
   font-weight: 300;
+  &:hover {
+    background-color: $golden-crown;
+    color: $white;
+  }
+}
+
+.secondary-btn {
+  background-color: #fff;
+  border: 1px solid $velvet-black;
+  &:hover {
+    background-color: $velvet-black;
+    color: $white;
+  }
 }
