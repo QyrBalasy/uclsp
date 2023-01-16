@@ -4,30 +4,31 @@
 .headerInfo {
   border-bottom: 1px solid $velvet-black;
   &-items {
-    padding: 10px 0;
+    padding: 9px 0 10px 0;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   & svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
   }
   &-contacts {
     display: flex;
-    column-gap: 35px;
+    column-gap: 39px;
+    height: inherit;
+    align-items: center;
     & li {
       display: flex;
-      align-items: center;
       column-gap: 12px;
-      height: 22px;
     }
   }
   &-links {
     margin-left: auto;
-    margin-right: 36px;
+    margin-right: 35px;
     display: flex;
-    column-gap: 22px;
+    column-gap: 21px;
   }
 }
 
