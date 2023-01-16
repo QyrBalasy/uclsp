@@ -1,11 +1,12 @@
 #footer {
+  background-color: #fff;
 }
 
 .footer-cols {
   display: flex;
   justify-content: space-between;
   gap: 100px;
-  margin: 54px 0;
+  padding: 54px 0;
   &__item {
     min-width: 190px;
     &-content {
