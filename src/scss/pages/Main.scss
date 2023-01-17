@@ -48,17 +48,72 @@
 }
 
 .section-services {
-
 }
 
-.section-cards{
+.section-cards {
   margin-top: 52px;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
-  &__item{
+  &__item {
     border-radius: 10px;
     border: 1px solid $blues-secondary;
-    padding: 20px 20px 20px 25px;
+    padding: 20px 20px 20px 10px;
+    height: 240px;
+    position: relative;
+    & img {
+      position: absolute;
+      right: 20px;
+      width: 120px;
+      height: 120px;
+    }
+    &-description {
+      padding-right: 20px;
+      position: absolute;
+      margin-top: -10px;
+      bottom: 50%;
+
+      top: 50%;
+      height: fit-content;
+      font-size: 22px;
+      line-height: 28px;
+      & span {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+.section-about__us {
+  &-slogan {
+    color: $blues-secondary;
+    margin-top: 52px;
+    margin-bottom: 62px;
+  }
+  & .section-cols__left-content,
+  .section-cols__right-content {
+    margin: 0;
+  }
+  & .section-cols__left-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 56px;
+    &__item{
+      border-left: 1px solid $velvet-black;
+      padding-left: 14px;
+      & span {
+        color: $yellow-crown;
+        font-size: 54px;
+        line-height: 64px;
+      }
+    }
+  }
+}
+
+.section-advantages{
+  & .section-cols{
+    display: grid;
+    grid-template-columns: 326px 1fr 326px;
   }
 }
