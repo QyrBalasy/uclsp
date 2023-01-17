@@ -1,0 +1,12 @@
+.input {
+  padding: 12px;
+  border: 1px solid $default-blue;
+  border-radius: 6px;
+  color: $velvet-black;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  &.error {
+    border: 1px solid red;
+  }
+}
