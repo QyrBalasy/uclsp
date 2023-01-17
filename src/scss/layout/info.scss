@@ -1,0 +1,41 @@
+.section-contacts {
+  & .section-cols__left h2 {
+    margin-bottom: 62px;
+  }
+  & .section-cols__left-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    & li {
+      display: flex;
+      align-items: center;
+      & a {
+        margin-left: 44px;
+      }
+    }
+    & svg {
+      width: 42px;
+      height: 42px;
+      stroke: #398290;
+    }
+  }
+  & .section-cols__right {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+}
+
+.section-contactForm {
+  & .section-cols__left-content {
+    max-width: 460px;
+    margin: 0;
+    display: block;
+    & h2 {
+      margin-bottom: 57px;
+    }
+    & p {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

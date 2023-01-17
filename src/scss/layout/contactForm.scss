@@ -1,0 +1,32 @@
+.contact-form {
+  padding: 30px 42px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+  max-width: 617px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 26px;
+  & .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    width: 100%;
+    color: $velvet-black;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  & .submit-wrapper {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    & .submit-docs {
+      font-size: 12px;
+      & a {
+        color: $yellow-crown;
+        &:hover{
+          color: $golden-crown__secondary;
+        }
+      }
+    }
+  }
+}
