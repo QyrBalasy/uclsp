@@ -260,17 +260,91 @@
           <h2>Нам доверяют</h2>
           <div class="section-cols">
             <div class="section-cols__item banner1">
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
             </div>
             <div class="section-cols__item banner2">
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
-              <img class="section-cols__item-img" src="https://via.placeholder.com/215x117" alt="">  
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
+              <img
+                class="section-cols__item-img"
+                src="https://via.placeholder.com/215x117"
+                alt=""
+              />
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-consultation">
+        <div class="container">
+          <div class="section-wrapper">
+            <svg>
+              <use xlink:href="@img/icons/icons.svg#icon_logo"></use>
+            </svg>
+            <h3>Оставьте свои контакты и мы Вас бесплатно проконсультируем</h3>
+            <form
+              class="consultation-form"
+              action="send_mail.php"
+              name="form"
+              method="POST"
+            >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ваше имя"
+                maxlength="30"
+                data-reg="^[А-ЯЁ][а-яё]*$"
+                class="input input-name"
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                data-tel-input
+                placeholder="Введите телефон"
+                maxlength="18"
+                class="input input-phone"
+              />
+
+              <input
+                type="submit"
+                value="Оставить заявку"
+                class="button secondary-btn"
+              />
+            </form>
           </div>
         </div>
       </section>
