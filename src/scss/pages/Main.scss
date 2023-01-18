@@ -140,7 +140,7 @@
       grid-template-rows: repeat(3, minmax(0, 1fr));
       gap: 26px;
     }
-    &__wrapper:nth-child(2) .section-cols__wrapper-item{
+    &__wrapper:nth-child(2) .section-cols__wrapper-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -152,8 +152,70 @@
   }
 }
 
-.section-process{
+.section-process {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/Vector.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+  }
+
+  & h2 {
+    margin-bottom: 90px;
+  }
+  & .section-cols {
+    column-gap: 80px;
+  }
+  & .section-cols__item {
+    border-radius: 18px;
+    background-color: #fff;
+    padding: 30px 15px;
+    text-align: center;
+    height: 183px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    & svg {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 75px;
+      top: -31px;
+    }
+  }
+}
+
+.section-clients {
   & h2 {
     margin-bottom: 52px;
+  }
+  & .section-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 22px;
+    grid-template-areas:
+      "banner1 banner1  banner1   banner1 ."
+      ".       banner2  banner2   banner2  banner2";
+    &__item-img {
+      border-radius: 18px;
+      border: 1px solid $yellow-crown;
+    }
+    &__item {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      justify-self: stretch;
+    }
+    &__item.banner1 {
+      grid-area: banner1;
+    }
+    &__item.banner2 {
+      grid-area: banner2;
+    }
   }
 }
