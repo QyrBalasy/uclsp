@@ -6,6 +6,7 @@ import * as phoneInput from "./modules/phoneinput.js";
 // import { smoothScroll } from "./modules/burger.js";
 import { formValidate } from "./modules/form.js";
 // import { onEntry } from "./modules/fadeBlocks.js";
+import { MySwiper } from "./modules/swiper.js";
 
 flsFunctions.isWebp();
 // accordion.showContent();
@@ -15,6 +16,7 @@ phoneInput.isPhone();
 // smoothScroll();
 formValidate();
 // onEntry();
+MySwiper();
 
 
 

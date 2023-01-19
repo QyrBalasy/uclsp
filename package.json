@@ -48,7 +48,6 @@
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
     "sass": "^1.55.0",
-    "swiper": "^8.4.4",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "^5.74.0",
@@ -58,6 +57,7 @@
     "css-loader": "^6.7.2",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "swiper": "^8.4.6"
   }
 }
