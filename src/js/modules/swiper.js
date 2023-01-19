@@ -33,8 +33,8 @@ export function MySwiper() {
     modules: [Navigation, Pagination],
     // Optional parameters
     direction: "horizontal",
-    loop: false,
-    slidesPerView: 1,
+    loop: true,
+    slidesPerView: 3,
 
     // If we need pagination
     pagination: {

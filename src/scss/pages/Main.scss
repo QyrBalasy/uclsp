@@ -252,3 +252,28 @@
     }
   }
 }
+
+.section-reviews{
+  & h2{
+    margin-bottom: 62px;
+  }
+  & .section-wrapper{
+    border-radius: 16px;
+    background-color: #ffff;
+    & .reviews-swiper{
+      padding: 92px;
+    }
+    &__item img{
+      width: 198px;
+      height: 256px;
+      object-fit: contain;
+    }
+  }
+  & .swiper-button-prev, .swiper-button-next{
+    background-color: $yellow-crown;
+    border-radius: 50%;
+    padding: 34px 20px;
+    width: 86px;
+    height: 86px;
+  }
+}
