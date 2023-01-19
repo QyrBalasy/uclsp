@@ -1,8 +1,15 @@
 .section-hero {
-  background: linear-gradient(90deg, #525252, rgba(82, 82, 82, 0)),
-    url("@img/section-hero__bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.section-hero__main-bg {
+  background-image: linear-gradient(90deg, #525252, rgba(82, 82, 82, 0)),
+    url("@img/section-hero__bg.png");
+}
+
+.section-hero__jobsafe-bg{
+  background-image: url("@img/section-hero_bg-jobsafe.png");
 }
 
 .section-cols {
@@ -244,32 +251,33 @@
     flex-direction: row;
     justify-content: space-between;
     column-gap: 60px;
-    & .input{
+    & .input {
       width: 100%;
     }
-    & .button{
+    & .button {
       z-index: 1;
     }
   }
 }
 
-.section-reviews{
-  & h2{
+.section-reviews {
+  & h2 {
     margin-bottom: 62px;
   }
-  & .section-wrapper{
+  & .section-wrapper {
     border-radius: 16px;
     background-color: #ffff;
-    & .reviews-swiper{
+    & .reviews-swiper {
       padding: 92px;
     }
-    &__item img{
+    &__item img {
       width: 198px;
       height: 256px;
       object-fit: contain;
     }
   }
-  & .swiper-button-prev, .swiper-button-next{
+  & .swiper-button-prev,
+  .swiper-button-next {
     background-color: $yellow-crown;
     border-radius: 50%;
     padding: 34px 20px;
