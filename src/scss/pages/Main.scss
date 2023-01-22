@@ -8,7 +8,7 @@
     url("@img/section-hero__bg.png");
 }
 
-.section-hero__jobsafe-bg{
+.section-hero__jobsafe-bg {
   background-image: url("@img/section-hero_bg-jobsafe.png");
 }
 
@@ -216,6 +216,10 @@
     &__item-img {
       border-radius: 18px;
       border: 1px solid $yellow-crown;
+      object-fit: contain;
+      width: 215px;
+      height: 117px;
+      padding: 10px;
     }
     &__item {
       display: grid;
