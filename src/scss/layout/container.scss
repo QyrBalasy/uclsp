@@ -1,25 +1,113 @@
-.container{
+.container {
   max-width: $max-widthContainer + px;
   margin: 0 auto;
   position: relative;
   @media (max-width: $desktop) {
-      max-width: 1200px;
-    }
+    max-width: 1200px;
+  }
   @media (max-width: $laptop) {
-      max-width: 850px;  
+    max-width: 850px;
   }
   @media (max-width: $tablet) {
-      max-width: 640px;  
+    max-width: 640px;
   }
   @media (max-width: $L-mobile) {
-      max-width: 500px;
-      padding: 0 5px;  
+    max-width: 500px;
+    padding: 0 5px;
   }
   @media (max-width: $mobile) {
-      max-width: 360px;
+    max-width: 360px;
   }
 }
 
-.section{
+.section {
   margin-bottom: 150px;
+  &-wrapper {
+    &__title {
+      max-width: 645px;
+      // margin-bottom: 104px;
+      & h2 {
+        margin-bottom: 52px;
+      }
+    }
+  }
+  &-cols {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      flex-basis: 50%;
+      &-content {
+        margin: 130px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        align-items: flex-start;
+      }
+    }
+    &__right {
+      &-content {
+        margin: 140px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        & li {
+          background-color: $white;
+          border-radius: 6px;
+          max-width: 330px;
+          list-style: none;
+          & a {
+            display: flex;
+            align-items: center;
+            column-gap: 15px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blues-secondary;
+            padding: 14px 13px 14px 24px;
+            & svg {
+              width: 40px;
+              height: 40px;
+              fill: $blues-secondary;
+              stroke: $blues-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-cards {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    &__item {
+      border-radius: 10px;
+      border: 1px solid $blues-secondary;
+      padding: 20px 20px 20px 10px;
+      height: 240px;
+      position: relative;
+      & svg {
+        position: absolute;
+        right: 20px;
+        width: 120px;
+        height: 120px;
+        fill: $blue-blues;
+        stroke: $blue-blues;
+      }
+      &-description {
+        padding-right: 20px;
+        position: absolute;
+        margin-top: -10px;
+        bottom: 50%;
+
+        top: 50%;
+        height: fit-content;
+        font-size: 22px;
+        line-height: 28px;
+        & span {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
 }
