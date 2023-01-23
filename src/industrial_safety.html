@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Промышленная безопасность" })
+  <body>
+    @@include('html/header.html', {})
+    <main>
+      <section class="section section-hero section-hero__indrtiSafety-bg">
+        <div class="container">
+          <div class="section-cols">
+            <div class="section-cols__left">
+              <div class="section-cols__left-content">
+                <h1>Промышленная безопасность</h1>
+                <h4>
+                  Учебный центр «ЛидерСтройПроект» объявляет набор слушателей на
+                  курсы по подготовке к аттестации в Ростехнадзоре
+                </h4>
+                <button class="button">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="section-cols__right">
+              <div class="section-cols__right-content">
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#icon_books"></use>
+                    </svg>
+                    Охрана труда на высоте</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_laptop-education"
+                      ></use>
+                    </svg>
+                    Аттестация сварщиков НАКС</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_checking"
+                      ></use>
+                    </svg>
+                    Разработка пакета документов по охране труда и ПБ</a
+                  >
+                </li>
+                <li>
+                  <a href="#">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_certificate"
+                      ></use>
+                    </svg>
+                    Промышленная безопасность</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/info.html', {})
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
