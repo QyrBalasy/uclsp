@@ -31,12 +31,13 @@
       & h3 {
         margin-bottom: 88px;
       }
-      & .section-cols{
+      & .section-cols {
         column-gap: 75px;
       }
       & .section-cols__item {
         border-radius: 12px;
         background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
         padding: 40px 37px;
         text-align: center;
         height: 183px;
@@ -48,10 +49,21 @@
           width: 90px;
           height: 90px;
           position: absolute;
-          left: 75px;
+          left: 50%;
+          margin-left: -45px;
           top: -31px;
+          fill: $blue-blues;
+          stroke: $blue-blues;
         }
       }
     }
+  }
+}
+
+.section-learningProgram {
+  & .section-cols__right-img {
+    width: 506px;
+    border-radius: 10px;
+    object-fit: cover;
   }
 }
