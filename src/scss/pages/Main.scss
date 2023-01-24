@@ -52,6 +52,10 @@
       }
     }
   }
+  & .section-cols__right-content {
+    border-radius: 10px;
+    overflow: hidden;
+  }
 }
 
 .section-advantages {
@@ -97,19 +101,21 @@
 
 .section-process {
   position: relative;
+  height: 500px;
+  overflow: hidden;
   &::before {
     content: "";
     position: absolute;
     background-image: url("../img/icons/icons.svg#bg_vector");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     width: calc(100% + 100px);
-    height: 400px;
+    height: 500px;
     transform: rotate(-15deg);
     left: -15px;
     opacity: 0.1;
-    bottom: -170px;
+    bottom: -125px;
   }
 
   & h2 {
@@ -155,7 +161,7 @@
       object-fit: contain;
       width: 215px;
       height: 117px;
-      padding: 10px;
+      padding: 22px 10px;
     }
     &__item {
       display: grid;
