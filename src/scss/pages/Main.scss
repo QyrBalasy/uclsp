@@ -96,12 +96,16 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/Vector.png");
+    background-image: url("../img/icons/icons.svg#bg_vector");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    width: 100%;
-    height: 500px;
+    width: calc(100% + 100px);
+    height: 400px;
+    transform: rotate(-15deg);
+    left: -15px;
+    opacity: 0.1;
+    bottom: -170px;
   }
 
   & h2 {

@@ -61,9 +61,74 @@
 }
 
 .section-learningProgram {
+  & .section-cols:nth-child(2) {
+    margin-top: 85px;
+    margin-bottom: 52px;
+  }
+  & .section-cols__item {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+    padding: 25px 22px;
+    background-color: $light-yellow;
+    border-radius: 8px;
+    border: 1px solid $blue-blues;
+    max-width: 246px;
+    & svg {
+      width: 54px;
+      height: 54px;
+      fill: $blue-blues;
+      stroke: $blue-blues;
+    }
+  }
+  & .section-cols__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 52px;
+    & p {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    & ul {
+      display: block;
+      & li {
+        position: relative;
+        margin-left: 45px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 15px;
+          left: -45px;
+          background: $blues-secondary;
+          height: 2px;
+          width: 45px;
+        }
+        & p {
+          margin-left: 54px;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
   & .section-cols__right-img {
     width: 506px;
     border-radius: 10px;
     object-fit: cover;
+    height: 100%;
+  }
+  & .learningProgram-description {
+    margin-top: 52px;
+    max-width: 490px;
+  }
+}
+
+.section-advantages {
+  &__wrapper {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    padding: 58px 84px;
   }
 }
