@@ -24,14 +24,20 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 30px;
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  @media (max-width: $L-mobile) {
+    font-size: 18px;
+    line-height: 24 px;
+  }
 }
 
 h5 {
   font-size: 18px;
   line-height: 22px;
-  font-weight: 600;
 }
-
 
 @media (max-width: $L-mobile) {
   h1 {

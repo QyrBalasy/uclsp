@@ -11,7 +11,7 @@
     min-width: 190px;
     &-content {
       &__logo > svg {
-        width: 79px;
+        width: 69px;
         height: 50px;
         margin-bottom: 20px;
       }
@@ -43,6 +43,30 @@
         }
       }
     }
+    &:last-child a {
+      white-space: nowrap;
+    }
+  }
+  @media (max-width: $laptop) {
+    padding: 40px 0;
+    gap: 32px;
+  }
+  @media (max-width: $tablet) {
+    justify-content: flex-start;
+    column-gap: 100px;
+    &__item:nth-child(2),
+    &__item:nth-child(3) {
+      display: none;
+    }
+  }
+  @media (max-width: $L-mobile) {
+    justify-content: space-between;
+    column-gap: 0;
+  }
+  @media (max-width: $mobile) {
+    &__item:last-child {
+      display: none;
+    }
   }
 }
 
@@ -51,6 +75,9 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media (max-width: $tablet) {
+    max-width: 190px;
+  }
 }
 
 .social-media {
