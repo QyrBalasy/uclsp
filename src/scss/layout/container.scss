@@ -25,6 +25,18 @@
 
 .section {
   margin-bottom: 150px;
+  &-title {
+    margin-bottom: 52px;
+    @media (max-width: $tablet) {
+      margin-bottom: 52px;
+    }
+    @media (max-width: $L-mobile) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+  }
   &-wrapper {
     &__title {
       max-width: 645px;
@@ -79,7 +91,7 @@
     }
   }
   &-cards {
-    margin-top: 52px;
+    // margin-top: 52px;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;

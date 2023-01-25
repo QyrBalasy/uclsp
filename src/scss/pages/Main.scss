@@ -4,7 +4,6 @@
 .section-about__us {
   &-slogan {
     color: $blues-secondary;
-    margin-top: 52px;
     margin-bottom: 62px;
   }
   & .section-cols__left-content,
@@ -91,10 +90,8 @@
     bottom: -125px;
   }
 
-  & h2 {
-    margin-bottom: 90px;
-  }
   & .section-cols {
+    margin-top: 90px;
     column-gap: 80px;
   }
   & .section-cols__item {
@@ -118,9 +115,9 @@
 }
 
 .section-clients {
-  & h2 {
-    margin-bottom: 52px;
-  }
+  // & h2 {
+  //   margin-bottom: 52px;
+  // }
   & .section-cols {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -184,9 +181,9 @@
 }
 
 .section-reviews {
-  & h2 {
-    margin-bottom: 62px;
-  }
+  // & h2 {
+  //   margin-bottom: 62px;
+  // }
   & .section-wrapper {
     border-radius: 16px;
     background-color: #ffff;
