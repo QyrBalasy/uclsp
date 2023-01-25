@@ -21,6 +21,11 @@
   background-image: url("@img/section-hero_bg-docPage.png");
 }
 
+.section-hero__cartNaks-bg {
+  background-image: linear-gradient(90deg, #525252, rgba(82, 82, 82, 0)),
+    url("@img/section-hero_bg-certNaks.png");
+}
+
 .white-text {
   color: $white;
 }

@@ -3,7 +3,64 @@
   @@include('html/head.html', { "title": "Аттестация сварщиков НАКС" })
   <body>
     @@include('html/header.html', {})
-    <main>@@include('html/info.html', {})</main>
+    <main>
+      <section class="section section-hero section-hero__cartNaks-bg">
+        <div class="container">
+          <div class="section-cols">
+            <div class="section-cols__left">
+              <div class="section-cols__left-content white-text">
+                <h1>Дополнительное профессиональное образование</h1>
+                <h4>Переквалификация не отрываясь от производства</h4>
+                <button class="button">Оставить заявку</button>
+              </div>
+            </div>
+            <div class="section-cols__right">
+              <div class="section-cols__right-content">
+                <li>
+                  <a href="/job_save.html">
+                    <svg>
+                      <use xlink:href="@img/icons/icons.svg#icon_books"></use>
+                    </svg>
+                    Охрана труда на высоте</a
+                  >
+                </li>
+                <li>
+                  <a href="/cert_naks.html">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_laptop-education"
+                      ></use>
+                    </svg>
+                    Аттестация сварщиков НАКС</a
+                  >
+                </li>
+                <li>
+                  <a href="/package_of_documents.html">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_checking"
+                      ></use>
+                    </svg>
+                    Разработка пакета документов по охране труда и ПБ</a
+                  >
+                </li>
+                <li>
+                  <a href="/industrial_safety.html">
+                    <svg>
+                      <use
+                        xlink:href="@img/icons/icons.svg#icon_certificate"
+                      ></use>
+                    </svg>
+                    Промышленная безопасность</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/info.html', {})
+    </main>
     @@include('html/footer.html', {})
     <script src="js/app.min.js"></script>
   </body>
