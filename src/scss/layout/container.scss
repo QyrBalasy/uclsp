@@ -113,4 +113,16 @@
       }
     }
   }
+  @media (max-width: $laptop) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: 80px;
+  }
+  @media (max-width: $L-mobile) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
 }
