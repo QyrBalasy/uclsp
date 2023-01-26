@@ -92,10 +92,18 @@
 }
 
 .section-learningProgram {
-  & .section-cols:nth-child(2) {
-    margin-top: 85px;
-    margin-bottom: 52px;
+  & .section-cols {
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    &__left {
+      flex-basis: 60%;
+    }
+    &__right {
+      flex-basis: 40%;
+    }
   }
+
   & .section-cols__item {
     display: flex;
     align-items: center;
@@ -111,47 +119,123 @@
       fill: $blue-blues;
       stroke: $blue-blues;
     }
+    @media (max-width: $tablet) {
+      width: 208px;
+    }
   }
   & .section-cols__left {
-    display: flex;
-    flex-direction: column;
-    row-gap: 52px;
-    & p {
-      font-size: 24px;
-      line-height: 30px;
-    }
-    & ul {
-      display: block;
-      & li {
-        position: relative;
-        margin-left: 45px;
-        margin-top: 32px;
-        margin-bottom: 32px;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 15px;
-          left: -45px;
-          background: $blues-secondary;
-          height: 2px;
-          width: 45px;
-        }
-        & p {
-          margin-left: 54px;
-          white-space: nowrap;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      @media (max-width: $laptop) {
+        width: 570px;
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+
+      & p {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      & ul {
+        margin-top: 52px;
+        & li {
+          position: relative;
+          margin-left: 45px;
+          margin-top: 32px;
+          margin-bottom: 32px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: -45px;
+            background: $blues-secondary;
+            height: 2px;
+            width: 45px;
+          }
+          & p {
+            margin-left: 54px;
+          }
         }
       }
     }
   }
-  & .section-cols__right-img {
-    width: 506px;
-    border-radius: 10px;
-    object-fit: cover;
-    height: 100%;
+  & .section-cols__right {
+    &-content {
+      max-width: 700px;
+      margin-left: auto;
+      width: 506px;
+      margin-left: auto;
+      height: 100%;
+      & .section-cols__right-img {
+        width: inherit;
+        border-radius: 10px;
+        object-fit: cover;
+        height: inherit;
+      }
+      @media (max-width: $laptop) {
+        width: 413px;
+      }
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
+    }
   }
-  & .learningProgram-description {
+
+  & .section-learningProgram__wrapper {
     margin-top: 52px;
+    @media (max-width: $tablet) {
+      margin-top: 50px;
+    }
+    @media (max-width: $L-mobile) {
+      margin-top: 32px;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+    }
+    & .section-cols {
+      @media (max-width: $laptop) {
+        column-gap: 24px;
+      }
+      @media (max-width: $tablet) {
+        // flex-basis: 60%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: flex-start;
+        max-width: 430px;
+      }
+    }
+    @media (max-width: $tablet) {
+      display: flex;
+      column-gap: 48px;
+    }
+    @media (max-width: $L-mobile) {
+      display: block;
+    }
+  }
+
+  & .learningProgram-description {
     max-width: 490px;
+    margin-top: 52px;
+    @media (max-width: $tablet) {
+      flex-basis: 40%;
+      width: 224px;
+      align-self: end;
+      & p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    @media (max-width: $L-mobile) {
+      margin-top: 32px;
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+    }
   }
 }
 
