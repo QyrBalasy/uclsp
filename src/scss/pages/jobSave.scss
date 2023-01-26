@@ -239,11 +239,93 @@
   }
 }
 
-.section-advantages {
+.section-jobSafe__advantages {
   &__wrapper {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
     padding: 58px 84px;
+    @media (max-width: $laptop) {
+      padding: 41px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      padding: 41px 56px;
+    }
+    @media (max-width: $L-mobile) {
+      flex-direction: column;
+      padding: 20px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      padding: 13px;
+    }
+    & .section-cols__left,
+    & .section-cols__right {
+      flex-basis: auto;
+    }
+    & .section-cols__left-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 52px;
+      max-width: 585px;
+      width: 502px;
+      & p {
+        font-size: 24px;
+        line-height: 30px;
+      }
+      @media (max-width: $tablet) {
+        margin-bottom: 50px;
+      }
+      @media (max-width: $L-mobile) {
+        width: 100%;
+        & p {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+    & .section-cols__right-content {
+      height: 100%;
+    }
+    & .jobSafe__advantages {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      justify-content: space-between;
+      height: 100%;
+      & li {
+        background-color: $white;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        & svg {
+          fill: $blue-blues;
+          width: 52px;
+          height: 52px;
+          margin: 29px 22px;
+          @media (max-width: $tablet) {
+            width: 48px;
+            height: 48px;
+          }
+          @media (max-width: $L-mobile) {
+            width: 40px;
+            height: 40px;
+          }
+          @media (max-width: $mobile) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        & p {
+          font-size: 22px;
+          line-height: 28px;
+          @media (max-width: $L-mobile) {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
   }
 }
