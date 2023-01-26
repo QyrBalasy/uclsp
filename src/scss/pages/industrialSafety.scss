@@ -1,0 +1,68 @@
+.section-forWho {
+  & .section-wrapper__card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    border-radius: 12px;
+    padding: 52px;
+    & .section-cols {
+      gap: 78px;
+      align-items: center;
+    }
+    @media (max-width: $laptop) {
+      padding: 44px;
+      & .section-cols {
+        gap: 44px;
+      }
+    }
+    @media (max-width: $tablet) {
+      padding: 22px;
+    }
+    @media (max-width: $L-mobile) {
+      & .section-cols {
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+    @media (max-width: $L-mobile) {
+      padding: 14px;
+    }
+  }
+  & .section-wrapper__card-icon {
+    background-color: $blue-blues;
+    border-radius: 8px;
+    padding: 15px;
+    & svg {
+      width: 90px;
+      height: 90px;
+      fill: $white;
+      stroke: $white;
+    }
+    @media (max-width: $tablet) {
+      padding: 12.5px;
+      & svg {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    @media (max-width: $tablet) {
+      padding: 7.5px;
+      & svg {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  & .section-wrapper__card-description {
+    & h4:first-child {
+      margin-bottom: 20px;
+      @media (max-width: $laptop) {
+        margin-bottom: 16px;
+      }
+      @media (max-width: $tablet) {
+        margin-bottom: 14px;
+      }
+    }
+    & .whoSafe {
+      color: $blues-secondary;
+    }
+  }
+}
