@@ -6,6 +6,39 @@
     position: relative;
     list-style: none;
   }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30px;
+    & svg {
+      width: 69px;
+      height: 50px;
+      @media (max-width: $L-mobile) {
+        width: 54px;
+        height: 39px;
+      }
+    }
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      justify-content: flex-start;
+      column-gap: 25px;
+    }
+  }
+  &__social {
+    display: flex;
+    column-gap: 22px;
+    justify-content: center;
+    @media (min-width: $tablet) {
+      display: none;
+    }
+    & svg {
+      width: 37px;
+      height: 37px;
+    }
+  }
   &__list {
     display: flex;
     & > li {
@@ -17,12 +50,12 @@
         & svg {
           width: 12px;
           height: 12px;
-          transition: .3s ease-out;
+          transition: 0.3s ease-out;
         }
       }
-      &:nth-child(2):hover svg{ 
+      &:nth-child(2):hover svg {
         transform: rotate(180deg);
-        transition: .3s ease-in;
+        transition: 0.3s ease-in;
       }
       &:last-child {
         margin-right: 0px;
@@ -34,6 +67,37 @@
     font-size: 18px;
     line-height: 22px;
     font-weight: 300;
+  }
+  @media (max-width: $tablet) {
+    visibility: hidden;
+    position: fixed;
+    max-width: 100vw;
+    height: 100vh;
+    width: 100%;
+    padding: 19px 0;
+    background-color: #fff;
+    top: 0;
+    z-index: 5;
+    right: -1000px;
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.overlay {
+      visibility: visible;
+      right: 0;
+    }
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      & li {
+        margin: 0;
+      }
+    }
+  }
+  @media (max-width: $mobile) {
+    padding: 24px 30px;
   }
 }
 .headerMain-menu__list > li:hover .headerMain-Submenu__list {
