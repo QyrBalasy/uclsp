@@ -280,18 +280,67 @@
     grid-template-areas:
       "banner1 banner1  banner1   banner1 ."
       ".       banner2  banner2   banner2  banner2";
+    @media (max-width: $laptop) {
+      grid-template-areas:
+        "banner1 banner1  banner1   banner1 banner1"
+        "banner2 banner2  banner2   banner2  banner2";
+    }
+    @media (max-width: $laptop) {
+      row-gap: 20px;
+    }
+    @media (max-width: $L-mobile) {
+      row-gap: 13px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      grid-template-areas: "banner1 banner2";
+    }
     &__item-img {
       border-radius: 18px;
       border: 1px solid $yellow-crown;
       object-fit: contain;
-      width: 215px;
+      max-width: 215px;
+      width: 100%;
       height: 117px;
       padding: 22px 10px;
+      @media (max-width: $tablet) {
+        width: 150px;
+        height: 80px;
+      }
+      @media (max-width: $L-mobile) {
+        width: 94px;
+        height: 50px;
+        padding: 10px;
+        border-radius: 6px;
+      }
+      @media (max-width: $mobile) {
+        width: 100%;
+      }
     }
     &__item {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       justify-self: stretch;
+      @media (max-width: $laptop) {
+        column-gap: 22px;
+        &:first-child {
+          justify-self: start;
+        }
+        &:last-child {
+          justify-self: end;
+        }
+      }
+      @media (max-width: $laptop) {
+        column-gap: 20px;
+      }
+      @media (max-width: $L-mobile) {
+        column-gap: 13px;
+      }
+      @media (max-width: $mobile) {
+        grid-template-columns: none;
+        row-gap: 20px;
+      }
     }
     &__item.banner1 {
       grid-area: banner1;
@@ -316,9 +365,25 @@
       height: 240px;
       top: 0;
       fill: white;
+      @media (max-width: $tablet) {
+        top: 70px;
+      }
+      @media (max-width: $L-mobile) {
+        display: none;
+      }
     }
     & h3 {
       margin-bottom: 22px;
+      max-width: 588px;
+    }
+    @media (max-width: $laptop) {
+      padding: 34px 42px;
+    }
+    @media (max-width: $tablet) {
+      padding: 30px 42px;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 30px 32px;
     }
   }
   & .consultation-form {
@@ -331,6 +396,14 @@
     }
     & .button {
       z-index: 1;
+    }
+    @media (max-width: $laptop) {
+      column-gap: 45px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: 24px;
+      max-width: 309px;
     }
   }
 }
