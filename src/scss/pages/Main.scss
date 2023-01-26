@@ -96,7 +96,7 @@
 .section-advantages {
   & .section-cols {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 326px auto 326px;
     gap: 26px;
     grid-template-areas:
       "col1 col2 col3"
@@ -111,6 +111,17 @@
     &__wrapper {
       display: grid;
       & .section-advantages__title {
+        margin-bottom: 52px;
+        @media (max-width: $tablet) {
+          margin-bottom: 50px;
+        }
+        @media (max-width: $L-mobile) {
+          margin-bottom: 32px;
+        }
+        @media (max-width: $mobile) {
+          margin-bottom: 30px;
+        }
+
         & span {
           color: $blues-secondary;
         }
@@ -125,6 +136,24 @@
         & h4 {
           color: $blues-secondary;
         }
+        & img {
+          object-fit: cover;
+          width: 100%;
+          border-radius: 10px;
+          height: 194px;
+        }
+        & .advantages-img__secondary {
+          height: 274px;
+          @media (max-width: $L-mobile) {
+            height: 194px;
+          }
+        }
+        @media (max-width: $laptop) {
+          padding: 23px;
+        }
+        @media (max-width: $tablet) {
+          padding: 22px;
+        }
       }
     }
     &__wrapper:nth-child(2) {
@@ -135,34 +164,71 @@
     &__wrapper:nth-child(2) .section-cols__wrapper-item {
       padding: 48px 22px;
       gap: 12px;
+      @media (max-width: $laptop) {
+        padding: 23px;
+      }
+    }
+    @media (max-width: $tablet) {
+      grid-template-areas:
+        "col1 col3 col3"
+        "col1 col3 col3"
+        "col2 col2 col2";
+    }
+    @media (max-width: $L-mobile) {
+      grid-template-areas:
+        "col1"
+        "col2"
+        "col3";
+      grid-template-columns: none;
+      row-gap: 15px;
     }
   }
 }
 
 .section-process {
   position: relative;
-  height: 500px;
   overflow: hidden;
+  padding-bottom: 50px;
   &::before {
     content: "";
     position: absolute;
     background-image: url("../img/icons/icons.svg#bg_vector");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
-    width: calc(100% + 100px);
-    height: 500px;
+    background-position: 0 -50px;
+    width: 100vw;
+    height: 400px;
     transform: rotate(-15deg);
-    left: -15px;
     opacity: 0.1;
-    bottom: -125px;
+    @media (max-width: $laptop) {
+      background-position: 0 50px;
+    }
+    @media (max-width: $tablet) {
+      background-position: 0 80px;
+    }
+    @media (max-width: $L-mobile) {
+      background-position: center;
+      height: 800px;
+      background-size: contain;
+    }
   }
 
   & .section-cols {
     margin-top: 90px;
     column-gap: 80px;
+    @media (max-width: $laptop) {
+      column-gap: 72px;
+    }
+    @media (max-width: $tablet) {
+      column-gap: 20px;
+    }
+    @media (max-width: $L-mobile) {
+      row-gap: 52px;
+      margin-top: 72px;
+    }
   }
   & .section-cols__item {
+    flex-basis: 25%;
     border-radius: 18px;
     background-color: #fff;
     padding: 30px 15px;
@@ -171,13 +237,37 @@
     position: relative;
     display: flex;
     align-items: flex-end;
-    width: 100%;
     & svg {
       width: 90px;
       height: 90px;
       position: absolute;
       left: 75px;
       top: -31px;
+      @media (max-width: $laptop) {
+        left: 53px;
+      }
+      @media (max-width: $tablet) {
+        top: -35px;
+        left: 40px;
+        width: 80px;
+        height: 80px;
+      }
+      @media (max-width: $L-mobile) {
+        top: -35px;
+        left: 50%;
+        margin-left: -50px;
+      }
+    }
+    @media (max-width: $laptop) {
+      justify-content: center;
+    }
+    @media (max-width: $tablet) {
+      height: 136px;
+      padding: 30px 5px;
+    }
+    @media (max-width: $L-mobile) {
+      height: 120px;
+      padding: 66px 5px 30px 5px;
     }
   }
 }

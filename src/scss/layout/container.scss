@@ -49,6 +49,9 @@
   &-cols {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $L-mobile) {
+      flex-direction: column;
+    }
     &__left {
       flex-basis: 50%;
       // &-content {
