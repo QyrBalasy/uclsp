@@ -116,13 +116,15 @@
       padding: 20px 20px 20px 10px;
       height: 240px;
       position: relative;
-      @media (max-width: $tablet) {
-        display: flex;
-        align-items: end;
-      }
+      // @media (max-width: $tablet) {
+      //   display: flex;
+      //   align-items: end;
+      // }
 
       @media (max-width: $L-mobile) {
         height: 176px;
+        display: flex;
+        align-items: end;
       }
       @media (max-width: $mobile) {
         height: 120px;
@@ -141,6 +143,7 @@
         @media (max-width: $L-mobile) {
           width: 80px;
           height: 80px;
+          top: 20px;
         }
       }
       &-description {
@@ -170,6 +173,14 @@
             font-size: 14px;
             line-height: 18px;
           }
+        }
+      }
+      &:hover {
+        background-color: $blues-secondary;
+        color: $white;
+        & svg {
+          fill: $specific-blue__secondary;
+          stroke: $specific-blue__secondary;
         }
       }
     }
