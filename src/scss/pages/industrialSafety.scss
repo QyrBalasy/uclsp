@@ -66,3 +66,62 @@
     }
   }
 }
+
+.section-learning {
+  & .section-cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 52px;
+    grid-template-areas:
+      "lear1 lear2"
+      "lear3 lear4"
+      "lear5 lear5";
+    @media (max-width: $laptop) {
+      gap: 35px;
+    }
+    @media (max-width: $tablet) {
+      grid-template-areas:
+        "lear1"
+        "lear2"
+        "lear3"
+        "lear4"
+        "lear5";
+      grid-template-columns: none;
+      row-gap: 20px;
+    }
+    @media (max-width: $L-mobile) {
+      row-gap: 10px;
+    }
+
+    &__items {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: 52px auto;
+      align-items: center;
+      padding: 14px 22px;
+      background-color: #fff;
+      border-radius: 8px;
+      & svg {
+        width: 54px;
+        height: 54px;
+        fill: $yellow-crown;
+        stroke: $yellow-crown;
+      }
+    }
+    &__items:nth-child(1) {
+      grid-area: lear2;
+    }
+    &__items:nth-child(2) {
+      grid-area: lear1;
+    }
+    &__items:nth-child(3) {
+      grid-area: lear3;
+    }
+    &__items:nth-child(4) {
+      grid-area: lear4;
+    }
+    &__items:nth-child(5) {
+      grid-area: lear5;
+    }
+  }
+}
