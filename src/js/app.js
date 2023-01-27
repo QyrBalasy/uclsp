@@ -7,6 +7,7 @@ import * as burger from "./modules/burger.js";
 import { formValidate } from "./modules/form.js";
 // import { onEntry } from "./modules/fadeBlocks.js";
 import { MySwiper } from "./modules/swiper.js";
+import * as Counterer from "./modules/counter.js";
 
 flsFunctions.isWebp();
 // accordion.showContent();
@@ -17,7 +18,5 @@ burger.burgerMenuCustom();
 formValidate();
 // onEntry();
 MySwiper();
-
-
-
+Counterer.windowLoad();
 

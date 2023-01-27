@@ -36,13 +36,6 @@ export function MySwiper() {
     },
 
     simulateTouch: false,
-
-    keyboard: {
-      enabled: true,
-      onlyInViewport: true,
-      pageUpDown: true,
-    },
-
     breakpoints: {
       // when window width is >= 320px
       320: {
