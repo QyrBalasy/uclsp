@@ -12,7 +12,7 @@ export function burgerMenuCustom() {
 
 export function smoothScroll() {
   const menuLinks = document.querySelectorAll(
-    ".menu__list-item__link[data-goto]"
+    ".headerMain-menu__link[data-goto]"
   );
   if (menuLinks.length > 0) {
     menuLinks.forEach((menuLink) => {
