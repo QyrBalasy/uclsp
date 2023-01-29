@@ -111,16 +111,16 @@
           line-height: 14px;
         }
         & svg {
-          width: 40px;
+          max-width: 40px;
           height: 40px;
           fill: $blues-secondary;
           stroke: $blues-secondary;
           @media (max-width: $tablet) {
-            width: 30px;
+            max-width: 30px;
             height: 30px;
           }
           @media (max-width: $L-mobile) {
-            width: 24px;
+            max-width: 24px;
             height: 24px;
           }
         }

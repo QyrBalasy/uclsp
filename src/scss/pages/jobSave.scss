@@ -114,13 +114,29 @@
     border: 1px solid $blue-blues;
     max-width: 246px;
     & svg {
-      width: 54px;
+      max-width: 54px;
       height: 54px;
       fill: $blue-blues;
       stroke: $blue-blues;
+      @media (max-width: $tablet) {
+        max-width: 50px;
+        height: 50px;
+      }
+      @media (max-width: $L-mobile) {
+        max-width: 40px;
+        height: 40px;
+      }
+      @media (max-width: $mobile) {
+        max-width: 30px;
+        height: 30px;
+      }
     }
     @media (max-width: $tablet) {
       width: 208px;
+      padding: 22px;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 16px 22px;
     }
   }
   & .section-cols__left {
@@ -206,6 +222,12 @@
         gap: 14px;
         justify-content: flex-start;
         max-width: 430px;
+      }
+      @media (max-width: $L-mobile) {
+        gap: 14px;
+      }
+      @media (max-width: $mobile) {
+        gap: 8px;
       }
     }
     @media (max-width: $tablet) {
@@ -301,19 +323,19 @@
         align-items: center;
         & svg {
           fill: $blue-blues;
-          width: 52px;
+          max-width: 52px;
           height: 52px;
           margin: 29px 22px;
           @media (max-width: $tablet) {
-            width: 48px;
+            max-width: 48px;
             height: 48px;
           }
           @media (max-width: $L-mobile) {
-            width: 40px;
+            max-width: 40px;
             height: 40px;
           }
           @media (max-width: $mobile) {
-            width: 30px;
+            max-width: 30px;
             height: 30px;
           }
         }
