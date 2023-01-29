@@ -1,0 +1,77 @@
+#forWho-Naks {
+  & .section-cols {
+    column-gap: 22px;
+    @media (max-width: $laptop) {
+      column-gap: 20px;
+    }
+    @media (max-width: $tablet) {
+      row-gap: 30px;
+      flex-direction: column;
+    }
+    @media (max-width: $L-mobile) {
+      row-gap: 20px;
+    }
+  }
+  & .section-cols__item {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    border-radius: 12px;
+    padding: 30px 42px;
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    flex-basis: 50%;
+    @media (max-width: $laptop) {
+      padding: 30px 9px;
+      column-gap: 32px;
+    }
+    @media (max-width: $tablet) {
+      padding: 30px;
+      column-gap: 30px;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 16px;
+      column-gap: 20px;
+    }
+    @media (max-width: $mobile) {
+      padding: 13px 10px 13px 13px;
+      column-gap: 13px;
+    }
+    & svg {
+      height: 90px;
+      max-width: 90px;
+      fill: $blues-secondary;
+      stroke: $blues-secondary;
+      @media (max-width: $tablet) {
+        max-width: 70px;
+        height: 70px;
+      }
+      @media (max-width: $L-mobile) {
+        max-width: 40px;
+        height: 40px;
+      }
+    }
+    &-description h4 {
+      margin-bottom: 16px;
+      @media (max-width: $L-mobile) {
+        margin-bottom: 12px;
+      }
+      @media (max-width: $mobile) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  & .section-description {
+    margin-top: 52px;
+    max-width: 849px;
+    font-weight: 300;
+    @media (max-width: $tablet) {
+      margin-top: 50px;
+    }
+    @media (max-width: $L-mobile) {
+      margin-top: 32px;
+    }
+    @media (max-width: $L-mobile) {
+      margin-top: 30px;
+    }
+  }
+}
