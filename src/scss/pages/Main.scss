@@ -238,7 +238,7 @@
     display: flex;
     align-items: flex-end;
     & svg {
-      width: 90px;
+      max-width: 90px;
       height: 90px;
       position: absolute;
       left: 75px;
@@ -249,7 +249,7 @@
       @media (max-width: $tablet) {
         top: -35px;
         left: 40px;
-        width: 80px;
+        max-width: 80px;
         height: 80px;
       }
       @media (max-width: $L-mobile) {

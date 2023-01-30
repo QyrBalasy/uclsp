@@ -61,7 +61,7 @@
         align-items: flex-end;
         width: 100%;
         & svg {
-          width: 90px;
+          max-width: 90px;
           height: 90px;
           position: absolute;
           left: 50%;
@@ -81,7 +81,7 @@
           justify-content: center;
           padding: 50px 5px 20px 5px;
           & svg {
-            width: 70px;
+            max-width: 70px;
             height: 70px;
             margin-left: -35px;
           }
