@@ -59,7 +59,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-services" id="#services">
+      <section class="section section-services" id="services">
         <div class="container">
           <h2 class="section-title">Наши услуги</h2>
           <div class="section-cards">
@@ -185,6 +185,7 @@
                   src="https://www.youtube.com/embed/Rfy8Ar2e0i4?controls=0"
                   title="YouTube video player"
                   frameborder="0"
+                  loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
@@ -280,7 +281,7 @@
           </div>
         </div>
       </section>
-      <section class="section section-clients">
+      <section id="partners" class="section section-clients">
         <div class="container">
           <h2 class="section-title">Нам доверяют</h2>
           <div class="section-cols">
@@ -341,13 +342,13 @@
             <form
               class="consultation-form"
               action="send_mail.php"
-              name="form"
+              name="formBanner"
               method="POST"
             >
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="nameBanner"
+                name="nameBanner"
                 placeholder="Ваше имя"
                 maxlength="30"
                 data-reg="^[А-ЯЁ][а-яё]*$"
@@ -356,8 +357,8 @@
 
               <input
                 type="tel"
-                name="phone"
-                id="phone"
+                name="phoneBanner"
+                id="phoneBanner"
                 data-tel-input
                 placeholder="Введите телефон"
                 maxlength="18"

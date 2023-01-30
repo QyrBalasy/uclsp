@@ -10,6 +10,12 @@
   &__item {
     min-width: 190px;
     &-content {
+      &__logo {
+        outline: none;
+        width: 69px;
+        height: 50px;
+        display: inline-block;
+      }
       &__logo > svg {
         width: 69px;
         height: 50px;
