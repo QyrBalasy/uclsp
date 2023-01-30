@@ -3,26 +3,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
 export function MySwiper() {
   const swiper = new Swiper(".reviewSwiper", {
     modules: [Navigation, Pagination],
-    // Optional parameters
     direction: "horizontal",
     loop: false,
-
-    slidesPerView: 3,
-    mousewheel: true,
-    keyboard: true,
-    // roundLengths: true,
-    // watchOverflow: true,
-    // centeredSlides: true,
-
-    // If we need pagination
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
 
     // Navigation arrows
     navigation: {
@@ -35,7 +20,6 @@ export function MySwiper() {
       el: ".swiper-scrollbar",
     },
 
-    simulateTouch: false,
     breakpoints: {
       // when window width is >= 320px
       320: {
@@ -52,6 +36,11 @@ export function MySwiper() {
       750: {
         slidesPerView: 3,
         spaceBetween: 40,
+        centeredSlides: false,
+      },
+      1000: {
+        slidesPerView: 3,
+        spaceBetween: 10,
         centeredSlides: false,
       },
     },
