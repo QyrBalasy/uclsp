@@ -282,10 +282,13 @@
       flex-direction: column;
       padding: 13px;
     }
-    & .section-cols__left,
-    & .section-cols__right {
-      flex-basis: auto;
+    & .section-cols__left {
+      flex-basis: 60%;
     }
+    & .section-cols__right {
+      flex-basis: 40%;
+    }
+
     & .section-cols__left-content {
       display: flex;
       flex-direction: column;
@@ -298,13 +301,20 @@
       }
       @media (max-width: $tablet) {
         margin-bottom: 50px;
+        row-gap: 40px;
       }
       @media (max-width: $L-mobile) {
         width: 100%;
+        row-gap: 32px;
+        margin-bottom: 32px;
         & p {
           font-size: 18px;
           line-height: 24px;
         }
+      }
+      @media (max-width: $mobile) {
+        row-gap: 30px;
+        margin-bottom: 30px;
       }
     }
     & .section-cols__right-content {

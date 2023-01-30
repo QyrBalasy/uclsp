@@ -125,3 +125,101 @@
     }
   }
 }
+
+#industrial-safaty__advantage {
+  & .section-wrapper {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 24px;
+    padding: 82px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: $laptop) {
+      padding: 40px;
+    }
+    @media (max-width: $tablet) {
+      padding: 40px 57px;
+    }
+    @media (max-width: $L-mobile) {
+      padding: 20px;
+    }
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      height: 100%;
+      width: 100vw;
+      background-image: url("../img/icons/icons.svg#bg_vector");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transform: rotate(-15deg);
+      opacity: 0.1;
+      @media (max-width: $tablet) {
+        background-size: contain;
+      }
+    }
+  }
+  & .section-cols {
+    column-gap: 103px;
+    &__items {
+      flex-basis: 50%;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+  & .section-cols__items:first-child {
+    & p {
+      font-size: 22px;
+      line-height: 28px;
+      margin: 50px 0;
+      @media (max-width: $L-mobile) {
+        margin: 32px 0;
+      }
+    }
+  }
+  & .section-cols__items:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    counter-reset: my-custom;
+    position: relative;
+    @media (max-width: $laptop) {
+      row-gap: 20px;
+    }
+    @media (max-width: $tablet) {
+      row-gap: 8px;
+    }
+    @media (max-width: $mobile) {
+      row-gap: 6px;
+    }
+    & li {
+      padding: 25px 22px 25px 65px;
+      counter-increment: my-custom;
+      @media (max-width: $tablet) {
+        padding: 22px 5px 22px 46px;
+      }
+      @media (max-width: $L-mobile) {
+        padding: 20px 5px 20px 46px;
+      }
+      @media (max-width: $mobile) {
+        padding: 14px 0px 14px 46px;
+      }
+      &::before {
+        content: counter(my-custom) "";
+        position: absolute;
+        left: 15px;
+        font-size: 54px;
+        line-height: 64px;
+        font-weight: 400;
+        color: $yellow-crown;
+        @media (max-width: $tablet) {
+          font-size: 48px;
+          line-height: 54px;
+          left: 0;
+        }
+      }
+    }
+  }
+}
