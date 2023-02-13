@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "ЛидерСтройПроект - обучение и повышение квалификации сотрудников" })
+  <body>
+    @@include('html/header.html', {})
+    <main>
+      <section class="section section-services" id="services">
+        <div class="container">
+          <h2 class="section-title">Наши услуги</h2>
+          <div class="section-cards">
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_helmet"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Охрана труда и пожарно-технический минимум
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_statistics"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Повышение квалификации и профессиональная переподготовка
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use
+                  xlink:href="@img/icons/icons.svg#icon_laptop-education"
+                ></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Обучение рабочим специальностям
+                <br />
+                <span>(стропальщики, монтажники, машинисты)</span>
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_protect"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Электробезопасность
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_checklist"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                СОУТ (специальная оценка условий труда)
+                <span> Оценка профессиональных рисков </span>
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_certificate"></use>
+              </svg>
+              <div class="section-cards__item-description">Сертификация</div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_approved"></use>
+              </svg>
+              <div class="section-cards__item-description">Лицензирование</div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_welding-mask"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Экспертиза промышленной безопасности
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use
+                  xlink:href="@img/icons/icons.svg#icon_control-system"
+                ></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Неразрушающий контроль (ВИК НК)
+              </div>
+            </div>
+            <div class="section-cards__item">
+              <svg>
+                <use xlink:href="@img/icons/icons.svg#icon_checking"></use>
+              </svg>
+              <div class="section-cards__item-description">
+                Подготовка документов для вступления в СРО
+                <span> (саморегулируемая организация) </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/info.html', {})
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
