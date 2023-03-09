@@ -189,29 +189,29 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 50px;
-  &::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icons/icons.svg#bg_vector");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 -50px;
-    width: 100vw;
-    height: 400px;
-    transform: rotate(-15deg);
-    opacity: 0.1;
-    @media (max-width: $laptop) {
-      background-position: 0 50px;
-    }
-    @media (max-width: $tablet) {
-      background-position: 0 80px;
-    }
-    @media (max-width: $L-mobile) {
-      background-position: center;
-      height: 800px;
-      background-size: contain;
-    }
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url("../img/icons/icons.svg#bg_vector");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: 0 -50px;
+  //   width: 100vw;
+  //   height: 400px;
+  //   transform: rotate(-15deg);
+  //   opacity: 0.1;
+  //   @media (max-width: $laptop) {
+  //     background-position: 0 50px;
+  //   }
+  //   @media (max-width: $tablet) {
+  //     background-position: 0 80px;
+  //   }
+  //   @media (max-width: $L-mobile) {
+  //     background-position: center;
+  //     height: 800px;
+  //     background-size: contain;
+  //   }
+  // }
 
   & .section-cols {
     margin-top: 90px;

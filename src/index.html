@@ -210,10 +210,25 @@
                   Преподаватели идут навстречу слушателям, подробно объясняют
                   сложные темы.
                 </p>
-                <img
-                  src="@img/photo-hand_withgraphic.png"
-                  alt="photo-hand_withgraphic.png"
-                />
+                <picture>
+                  <source
+                    srcset="@img/photo_hand_with_graphic-small.png"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="@img/photo_hand_with_graphic-medium.png"
+                    media="(min-width: 450px)"
+                  />
+                  <source
+                    srcset="@img/photo_hand_with_graphic-small.png"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="@img/photo-hand_withgraphic.png"
+                    alt="photo-hand_withgraphic.png"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
             <div class="section-cols__wrapper">
@@ -240,11 +255,26 @@
                   Они знакомы со всеми изменениями в законодательстве. Вы
                   получаете только актуальную информацию.
                 </p>
-                <img
-                  src="@img/photo_teaching.png"
-                  class="advantages-img__secondary"
-                  alt="photo_teaching.png"
-                />
+                <picture>
+                  <source
+                    srcset="@img/photo_teaching-small.png"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="@img/photo_teaching-medium.png"
+                    media="(min-width: 450px)"
+                  />
+                  <source
+                    srcset="@img/photo_teaching-small.png"
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="@img/photo_teaching.png"
+                    class="advantages-img__secondary"
+                    alt="photo_teaching.png"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -290,21 +320,25 @@
                 class="section-cols__item-img"
                 src="@img/clients/nornikel.svg"
                 alt="nornikel.svg"
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/GazProm.svg"
                 alt="GazProm.svg"
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/MosTransProject.svg"
                 alt="MosTransProject.svg"
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/marcopolo.png"
                 alt="marcopolo.png"
+                loading="lazy"
               />
             </div>
             <div class="section-cols__item banner2">
@@ -312,21 +346,25 @@
                 class="section-cols__item-img"
                 src="@img/clients/profgazstroy.svg"
                 alt="profgazstroy.svg"
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/mosmetstroy.png"
                 alt="mosmetstroy.png"
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/tomskneft.png"
                 alt="tomskneft.png "
+                loading="lazy"
               />
               <img
                 class="section-cols__item-img"
                 src="@img/clients/Novotech.png"
                 alt="Novotech.png"
+                loading="lazy"
               />
             </div>
           </div>
@@ -381,112 +419,143 @@
             <div class="reviewSwiper swiper">
               <div class="swiper-wrapper">
                 <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/review-1.jpg" target="_blank">
-                    <img src="@img/reviews/review-1.jpg" alt="review-1.jpg" />
-                  </a>
-                </div>
-                <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/review-2.jpg" target="_blank">
-                    <img src="@img/reviews/review-2.jpg" alt="review-2.jpg" />
-                  </a>
-                </div>
-                <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/Арсенал_Климат.jpg" target="_blank">
+                  <a href="@img/reviews/main/review-1.jpg" target="_blank">
                     <img
-                      src="@img/reviews/Арсенал_Климат.jpg"
+                      src="@img/reviews/review-1.1.png"
+                      alt="review-1.1.png"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="review-swiper-slide swiper-slide">
+                  <a href="@img/reviews/main/review-2.jpg" target="_blank">
+                    <img
+                      src="@img/reviews/review-2.1.png"
+                      alt="review-2.jpg"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+                <div class="review-swiper-slide swiper-slide">
+                  <a
+                    href="@img/reviews/main/Арсенал_Климат.jpg"
+                    target="_blank"
+                  >
+                    <img
+                      src="@img/reviews/Арсенал_Климат.1.png"
                       alt="Арсенал_Климат.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/благодарность_ЛСП.jpg" target="_blank">
+                  <a
+                    href="@img/reviews/main/благодарность_ЛСП.jpg"
+                    target="_blank"
+                  >
                     <img
-                      src="@img/reviews/благодарность_ЛСП.jpg"
+                      src="@img/reviews/благодарность_ЛСП.1.png"
                       alt="благодарность_ЛСП.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
                   <a
-                    href="@img/reviews/Благодарственное_письмо.jpg"
+                    href="@img/reviews/main/Благодарственное_письмо.jpg"
                     target="_blank"
                   >
                     <img
-                      src="@img/reviews/Благодарственное_письмо.jpg"
+                      src="@img/reviews/Благодарственное_письмо.1.png"
                       alt="Благодарственное_письмо.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
                   <a
-                    href="@img/reviews/Благодарственное_письмо_АБС.jpg"
+                    href="@img/reviews/main/Благодарственное_письмо_АБС.jpg"
                     target="_blank"
                   >
                     <img
-                      src="@img/reviews/Благодарственное_письмо_АБС.jpg"
+                      src="@img/reviews/Благодарственное_письмо_АБС.1.png"
                       alt="Благодарственное_письмо_АБС.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
                   <a
-                    href="@img/reviews/Благодарственное_письмо_от_СМУ_25_Метростроя-1.jpg"
+                    href="@img/reviews/main/Благодарственное_письмо_от_СМУ_25_Метростроя-1.jpg"
                     target="_blank"
                   >
                     <img
-                      src="@img/reviews/Благодарственное_письмо_от_СМУ_25_Метростроя-1.jpg"
+                      src="@img/reviews/Благодарственное_письмо_от_СМУ_25_Метростроя-1.1.png"
                       alt="Благодарственное_письмо_от_СМУ_25_Метростроя-1.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/Лицензия.jpg" target="_blank">
-                    <img src="@img/reviews/Лицензия.jpg" alt="Лицензия.jpg" />
+                  <a href="@img/reviews/main/Лицензия.jpg" target="_blank">
+                    <img
+                      src="@img/reviews/Лицензия.1.png"
+                      alt="Лицензия.jpg"
+                      loading="lazy"
+                    />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/Лицензия-2.jpg" target="_blank">
+                  <a href="@img/reviews/main/Лицензия-2.jpg" target="_blank">
                     <img
-                      src="@img/reviews/Лицензия-2.jpg"
+                      src="@img/reviews/Лицензия-2.1.png"
                       alt="Лицензия-2.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
-                  <a href="@img/reviews/Лицензия_2.jpg" target="_blank">
+                  <a href="@img/reviews/main/Лицензия_2.jpg" target="_blank">
                     <img
-                      src="@img/reviews/Лицензия_2.jpg"
+                      src="@img/reviews/Лицензия_2.1.png"
                       alt="Лицензия_2.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
-                  <a target="_blank" href="@img/reviews/Отзыв_Велесстрой.jpg">
+                  <a
+                    target="_blank"
+                    href="@img/reviews/main/Отзыв_Велесстрой.jpg"
+                  >
                     <img
-                      src="@img/reviews/Отзыв_Велесстрой.jpg"
+                      src="@img/reviews/Отзыв_Велесстрой.1.png"
                       alt="Отзыв_Велесстрой.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
                   <a
-                    href="@img/reviews/Письмо_уведомление_МЧС.jpg"
+                    href="@img/reviews/main/Письмо_уведомление_МЧС.jpg"
                     target="_blank"
                   >
                     <img
-                      src="@img/reviews/Письмо_уведомление_МЧС.jpg"
+                      src="@img/reviews/Письмо_уведомление_МЧС.1.png"
                       alt="Письмо_уведомление_МЧС.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
                 <div class="review-swiper-slide swiper-slide">
                   <a
-                    href="@img/reviews/Письмо уведомление МЧС-2.jpg"
+                    href="@img/reviews/main/Письмо уведомление МЧС-2.jpg"
                     target="_blank"
                   >
                     <img
-                      src="@img/reviews/Письмо уведомление МЧС-2.jpg"
+                      src="@img/reviews/Письмо уведомление МЧС-2.1.png"
                       alt="Письмо уведомление МЧС-2.jpg"
+                      loading="lazy"
                     />
                   </a>
                 </div>
@@ -503,83 +572,5 @@
     </main>
     @@include('html/footer.html', {})
     <script src="js/app.min.js"></script>
-    <div
-      class="mango-callback"
-      data-settings='{"type":"", "id": "MTAwMTI2NzY=","autoDial" : "0", "lang" : "ru-ru", "host":"widgets.mango-office.ru/", "errorMessage": "В данный момент наблюдаются технические проблемы и совершение звонка невозможно"}'
-    ></div>
-    <script>
-      !(function (t) {
-        function e() {
-          i = document.querySelectorAll(".button-widget-open");
-          for (var e = 0; e < i.length; e++)
-            "true" != i[e].getAttribute("init") &&
-              ((options = JSON.parse(
-                i[e].closest("." + t).getAttribute("data-settings")
-              )),
-              i[e].setAttribute(
-                "onclick",
-                "alert('" + options.errorMessage + "(0000)'); return false;"
-              ));
-        }
-        function o(t, e, o, n, i, r) {
-          var s = document.createElement(t);
-          for (var a in e) s.setAttribute(a, e[a]);
-          s.readyState
-            ? (s.onreadystatechange = o)
-            : ((s.onload = n), (s.onerror = i)),
-            r(s);
-        }
-        function n() {
-          for (var t = 0; t < i.length; t++) {
-            var e = i[t];
-            if ("true" != e.getAttribute("init")) {
-              options = JSON.parse(e.getAttribute("data-settings"));
-              var o = new MangoWidget({
-                host: window.location.protocol + "//" + options.host,
-                id: options.id,
-                elem: e,
-                message: options.errorMessage,
-              });
-              o.initWidget(),
-                e.setAttribute("init", "true"),
-                i[t].setAttribute("onclick", "");
-            }
-          }
-        }
-        host = window.location.protocol + "//widgets.mango-office.ru/";
-        var i = document.getElementsByClassName(t);
-        o(
-          "link",
-          {
-            rel: "stylesheet",
-            type: "text/css",
-            href: host + "css/widget-button.css",
-          },
-          function () {},
-          function () {},
-          e,
-          function (t) {
-            var headTag = document.querySelector("head");
-            headTag.insertBefore(t, headTag.firstChild);
-          }
-        ),
-          o(
-            "script",
-            {
-              type: "text/javascript",
-              src: host + "widgets/mango-callback.js",
-            },
-            function () {
-              ("complete" == this.readyState || "loaded" == this.readyState) &&
-                n();
-            },
-            n,
-            e,
-            function (t) {
-              document.documentElement.appendChild(t);
-            }
-          );
-      })("mango-callback");
-    </script>
   </body>
 </html>

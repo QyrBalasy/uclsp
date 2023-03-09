@@ -24,6 +24,7 @@ export const scss = () => {
       .pipe(
         sass({
           outputStyle: "expanded",
+          includePaths: ['./node_modules'],
         })
       )
       .pipe(app.plugins.replace(/@img\//g, "../img/"))
