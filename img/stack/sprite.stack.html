@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG stack preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            h2 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+ .svg-bg_vector-dims { width: 116px; height: 22px; }
+ .svg-icon-diploma-dims { width: 90px; height: 90px; }
+ .svg-icon-mortarboard-dims { width: 90px; height: 90px; }
+ .svg-icon-tech-support-dims { width: 90px; height: 90px; }
+ .svg-icon_approved-dims { width: 120px; height: 120px; }
+ .svg-icon_arrow-dims { width: 14px; height: 10px; }
+ .svg-icon_books-dims { width: 42px; height: 42px; }
+ .svg-icon_boss-dims { width: 90px; height: 90px; }
+ .svg-icon_calc-money-dims { width: 90px; height: 90px; }
+ .svg-icon_certificate-dims { width: 42px; height: 42px; }
+ .svg-icon_check2-dims { width: 90px; height: 90px; }
+ .svg-icon_checkbox-dims { width: 52px; height: 52px; }
+ .svg-icon_checking-dims { width: 120px; height: 120px; }
+ .svg-icon_checklist-dims { width: 120px; height: 120px; }
+ .svg-icon_control-system-dims { width: 120px; height: 120px; }
+ .svg-icon_electricalsafetysvg-dims { width: 120px; height: 120px; }
+ .svg-icon_email-dims { width: 24px; height: 22px; }
+ .svg-icon_growup-dims { width: 120px; height: 120px; }
+ .svg-icon_helmet-dims { width: 120px; height: 85px; }
+ .svg-icon_info-dims { width: 26px; height: 26px; }
+ .svg-icon_instagram-dims { width: 24px; height: 24px; }
+ .svg-icon_laptop-dims { width: 54px; height: 54px; }
+ .svg-icon_laptop-education-dims { width: 42px; height: 42px; }
+ .svg-icon_location-dims { width: 24px; height: 24px; }
+ .svg-icon_logo-dims { width: 116px; height: 83px; }
+ .svg-icon_money-dims { width: 90px; height: 90px; }
+ .svg-icon_mortartboard-dims { width: 54px; height: 54px; }
+ .svg-icon_out-of-time-dims { width: 90px; height: 90px; }
+ .svg-icon_people-dims { width: 54px; height: 54px; }
+ .svg-icon_phone-dims { width: 24px; height: 24px; }
+ .svg-icon_profile-dims { width: 54px; height: 54px; }
+ .svg-icon_protect-dims { width: 96px; height: 121px; }
+ .svg-icon_statistics-dims { width: 117px; height: 120px; }
+ .svg-icon_telegram-dims { width: 24px; height: 24px; }
+ .svg-icon_welding-mask-dims { width: 120px; height: 120px; }
+ .svg-icon_whatsapp-dims { width: 24px; height: 24px; }
+ .svg-icon_worker-jun-dims { width: 90px; height: 90px; }
+ .svg-icon_worker-mid-dims { width: 90px; height: 90px; }
+ .svg-icon_worker-sen-dims { width: 90px; height: 90px; }
+ .svg-section-process__Vector-dims { width: 1024px; height: 415px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+        <header>
+            <h1>SVG stack preview</h1>
+            <p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+            <ul>
+                <li>Your browser has to <a href="https://caniuse.com/svg-fragment" target="_blank" rel="noopener noreferrer">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+                <li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank" rel="noopener noreferrer">fixsvgstack.jquery.js</a>.</li>
+            </ul>
+        </header>
+        <section>
+
+<!--
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.
+-->
+
+            <ul>
+
+             <li title="bg_vector">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#bg_vector" class="svg-bg_vector-dims" alt="bg_vector">
+                    </div>
+                    <h2>bg_vector, </h2>
+                </li>
+             <li title="icon-diploma">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-diploma" class="svg-icon-diploma-dims" alt="icon-diploma">
+                    </div>
+                    <h2>icon-diploma, </h2>
+                </li>
+             <li title="icon-mortarboard">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-mortarboard" class="svg-icon-mortarboard-dims" alt="icon-mortarboard">
+                    </div>
+                    <h2>icon-mortarboard, </h2>
+                </li>
+             <li title="icon-tech-support">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon-tech-support" class="svg-icon-tech-support-dims" alt="icon-tech-support">
+                    </div>
+                    <h2>icon-tech-support, </h2>
+                </li>
+             <li title="icon_approved">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_approved" class="svg-icon_approved-dims" alt="icon_approved">
+                    </div>
+                    <h2>icon_approved, </h2>
+                </li>
+             <li title="icon_arrow">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_arrow" class="svg-icon_arrow-dims" alt="icon_arrow">
+                    </div>
+                    <h2>icon_arrow, </h2>
+                </li>
+             <li title="icon_books">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_books" class="svg-icon_books-dims" alt="icon_books">
+                    </div>
+                    <h2>icon_books, </h2>
+                </li>
+             <li title="icon_boss">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_boss" class="svg-icon_boss-dims" alt="icon_boss">
+                    </div>
+                    <h2>icon_boss, </h2>
+                </li>
+             <li title="icon_calc-money">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_calc-money" class="svg-icon_calc-money-dims" alt="icon_calc-money">
+                    </div>
+                    <h2>icon_calc-money, </h2>
+                </li>
+             <li title="icon_certificate">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_certificate" class="svg-icon_certificate-dims" alt="icon_certificate">
+                    </div>
+                    <h2>icon_certificate, </h2>
+                </li>
+             <li title="icon_check2">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_check2" class="svg-icon_check2-dims" alt="icon_check2">
+                    </div>
+                    <h2>icon_check2, </h2>
+                </li>
+             <li title="icon_checkbox">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_checkbox" class="svg-icon_checkbox-dims" alt="icon_checkbox">
+                    </div>
+                    <h2>icon_checkbox, </h2>
+                </li>
+             <li title="icon_checking">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_checking" class="svg-icon_checking-dims" alt="icon_checking">
+                    </div>
+                    <h2>icon_checking, </h2>
+                </li>
+             <li title="icon_checklist">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_checklist" class="svg-icon_checklist-dims" alt="icon_checklist">
+                    </div>
+                    <h2>icon_checklist, </h2>
+                </li>
+             <li title="icon_control-system">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_control-system" class="svg-icon_control-system-dims" alt="icon_control-system">
+                    </div>
+                    <h2>icon_control-system, </h2>
+                </li>
+             <li title="icon_electricalsafetysvg">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_electricalsafetysvg" class="svg-icon_electricalsafetysvg-dims" alt="icon_electricalsafetysvg">
+                    </div>
+                    <h2>icon_electricalsafetysvg, </h2>
+                </li>
+             <li title="icon_email">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_email" class="svg-icon_email-dims" alt="icon_email">
+                    </div>
+                    <h2>icon_email, </h2>
+                </li>
+             <li title="icon_growup">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_growup" class="svg-icon_growup-dims" alt="icon_growup">
+                    </div>
+                    <h2>icon_growup, </h2>
+                </li>
+             <li title="icon_helmet">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_helmet" class="svg-icon_helmet-dims" alt="icon_helmet">
+                    </div>
+                    <h2>icon_helmet, </h2>
+                </li>
+             <li title="icon_info">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_info" class="svg-icon_info-dims" alt="icon_info">
+                    </div>
+                    <h2>icon_info, </h2>
+                </li>
+             <li title="icon_instagram">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_instagram" class="svg-icon_instagram-dims" alt="icon_instagram">
+                    </div>
+                    <h2>icon_instagram, </h2>
+                </li>
+             <li title="icon_laptop">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_laptop" class="svg-icon_laptop-dims" alt="icon_laptop">
+                    </div>
+                    <h2>icon_laptop, </h2>
+                </li>
+             <li title="icon_laptop-education">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_laptop-education" class="svg-icon_laptop-education-dims" alt="icon_laptop-education">
+                    </div>
+                    <h2>icon_laptop-education, </h2>
+                </li>
+             <li title="icon_location">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_location" class="svg-icon_location-dims" alt="icon_location">
+                    </div>
+                    <h2>icon_location, </h2>
+                </li>
+             <li title="icon_logo">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_logo" class="svg-icon_logo-dims" alt="icon_logo">
+                    </div>
+                    <h2>icon_logo, </h2>
+                </li>
+             <li title="icon_money">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_money" class="svg-icon_money-dims" alt="icon_money">
+                    </div>
+                    <h2>icon_money, </h2>
+                </li>
+             <li title="icon_mortartboard">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_mortartboard" class="svg-icon_mortartboard-dims" alt="icon_mortartboard">
+                    </div>
+                    <h2>icon_mortartboard, </h2>
+                </li>
+             <li title="icon_out-of-time">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_out-of-time" class="svg-icon_out-of-time-dims" alt="icon_out-of-time">
+                    </div>
+                    <h2>icon_out-of-time, </h2>
+                </li>
+             <li title="icon_people">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_people" class="svg-icon_people-dims" alt="icon_people">
+                    </div>
+                    <h2>icon_people, </h2>
+                </li>
+             <li title="icon_phone">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_phone" class="svg-icon_phone-dims" alt="icon_phone">
+                    </div>
+                    <h2>icon_phone, </h2>
+                </li>
+             <li title="icon_profile">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_profile" class="svg-icon_profile-dims" alt="icon_profile">
+                    </div>
+                    <h2>icon_profile, </h2>
+                </li>
+             <li title="icon_protect">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_protect" class="svg-icon_protect-dims" alt="icon_protect">
+                    </div>
+                    <h2>icon_protect, </h2>
+                </li>
+             <li title="icon_statistics">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_statistics" class="svg-icon_statistics-dims" alt="icon_statistics">
+                    </div>
+                    <h2>icon_statistics, </h2>
+                </li>
+             <li title="icon_telegram">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_telegram" class="svg-icon_telegram-dims" alt="icon_telegram">
+                    </div>
+                    <h2>icon_telegram, </h2>
+                </li>
+             <li title="icon_welding-mask">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_welding-mask" class="svg-icon_welding-mask-dims" alt="icon_welding-mask">
+                    </div>
+                    <h2>icon_welding-mask, </h2>
+                </li>
+             <li title="icon_whatsapp">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_whatsapp" class="svg-icon_whatsapp-dims" alt="icon_whatsapp">
+                    </div>
+                    <h2>icon_whatsapp, </h2>
+                </li>
+             <li title="icon_worker-jun">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_worker-jun" class="svg-icon_worker-jun-dims" alt="icon_worker-jun">
+                    </div>
+                    <h2>icon_worker-jun, </h2>
+                </li>
+             <li title="icon_worker-mid">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_worker-mid" class="svg-icon_worker-mid-dims" alt="icon_worker-mid">
+                    </div>
+                    <h2>icon_worker-mid, </h2>
+                </li>
+             <li title="icon_worker-sen">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#icon_worker-sen" class="svg-icon_worker-sen-dims" alt="icon_worker-sen">
+                    </div>
+                    <h2>icon_worker-sen, </h2>
+                </li>
+             <li title="section-process__Vector">
+                    <div class="icon-box">
+                        <img src="../icons/icons.svg#section-process__Vector" class="svg-section-process__Vector-dims" alt="section-process__Vector">
+                    </div>
+                    <h2>section-process__Vector, </h2>
+                </li>
+         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at Thu, 09 Mar 2023 09:47:50 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
